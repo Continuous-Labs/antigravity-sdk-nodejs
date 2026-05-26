@@ -121,4 +121,11 @@ Thumbs.db
 # Antigravity CLI local workspace configs
 .antigravitycli/
 
+# Python SDK source reference
+/antigravity-sdk-python/
+
+# Local scratch and temporary scripts
+/scratch/
+
+
 
