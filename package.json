@@ -19,7 +19,7 @@
     "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "test": "vitest run",
     "test:watch": "vitest",
-    "install-harness": "bash scripts/install_harness.sh"
+    "install-localharness": "bash scripts/install_localharness.sh"
   },
   "keywords": [
     "google",

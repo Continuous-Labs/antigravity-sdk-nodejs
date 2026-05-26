@@ -18,7 +18,22 @@ Initialize and add the SDK to your project using `pnpm`:
 pnpm add google-antigravity
 ```
 
-### 2. Set your Gemini API Key
+### 2. Install the `localharness` Binary
+The SDK relies on the compiled `localharness` binary to orchestrate and execute agents locally. You can download and install this binary directly from the PyPI wheel package without needing Python, `pip`, or virtual environments by running:
+
+```bash
+pnpm run install-localharness
+```
+
+This script automatically detects your operating system and architecture, downloads the correct wheel package, extracts the binary, and places it at `./bin/localharness`.
+
+Once installed, configure the SDK to use it by setting the following environment variable:
+
+```bash
+export ANTIGRAVITY_HARNESS_PATH="$(pwd)/bin/localharness"
+```
+
+### 3. Set your Gemini API Key
 The localharness connection strategy requires a Gemini API key. Set it as an environment variable:
 
 ```bash
@@ -116,11 +131,17 @@ const config = new LocalAgentConfig({
 
 ## Developer Guides & Examples
 
-Explore our complete port of guides and scripts in the [examples](file:///home/felix/ContinuousLabs/projects/antigravity-sdk-nodejs/examples/) directory:
+Explore our complete port of guides and scripts in the [examples](./examples) directory:
 - `hello_world.ts` - Basic conversational interface.
 - `custom_tools.ts` - Integrating custom function calls.
 - `policies.ts` - Configuring security policies and directory restrictions.
 - `streaming.ts` - Real-time conversational and reasoning token streams.
+
+---
+
+## Acknowledgements
+
+Special thanks to [codeitlikemiley (Uriah Galang)](https://github.com/codeitlikemiley/antigravity-sdk-rust) for the script/concept to install the `localharness` binary.
 
 ---
 
