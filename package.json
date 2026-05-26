@@ -1,0 +1,45 @@
+{
+  "name": "google-antigravity",
+  "version": "0.1.1",
+  "description": "Google Antigravity SDK for building autonomous AI agents in Node.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "install-harness": "bash scripts/install_harness.sh"
+  },
+  "keywords": [
+    "google",
+    "gemini",
+    "antigravity",
+    "sdk",
+    "ai",
+    "agent",
+    "mcp"
+  ],
+  "author": "Google LLC",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/ws": "^8.5.10",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  }
+}

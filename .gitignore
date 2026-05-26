@@ -118,3 +118,7 @@ Thumbs.db
 # Antigravity localharness binary
 /bin/localharness
 
+# Antigravity CLI local workspace configs
+.antigravitycli/
+
+
